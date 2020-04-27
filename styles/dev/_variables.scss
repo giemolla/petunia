@@ -1,0 +1,66 @@
+$simple-font: "Puritan", sans-serif;
+$fancy-font: "Pattaya", sans-serif;
+$main-color: rgba(39, 116, 47, 1);
+$secondary-color: rgba(39, 116, 47, 0.23);
+$white: rgba(255, 255, 255, 1);
+$grey: #f3f3f3;
+$greater-font-size: 20px;
+$normal-font-size: 18px;
+$full-width: 100%;
+$with-margins: 60%;
+
+%flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+%button {
+	font-family: $simple-font;
+	font-size: inherit;
+	border-radius: 15px;
+	border: none;
+	padding: 10px 30px;
+	cursor: pointer;
+	transition: transform 0.2s ease-out;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+%article-image {
+	width: 90%;
+	height: 200px;
+	background-size: cover;
+}
+
+@mixin horizontal-center {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}
+
+@mixin photo($photo, $ext, $cs, $ce, $rs, $re) {
+	background-image: url("../images/balkon-"+$photo+"."+$ext);
+	grid-column-start: $cs;
+	grid-column-end: $ce;
+	grid-row-start: $rs;
+	grid-row-end: $re;
+}
+
+@mixin font($family, $color, $size: "inherit") {
+	font-family: $family;
+	font-size: $size;
+	color: $color;
+}
+
+@mixin round-picture($url, $size, $border: 5px solid $white) {
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	border: $border;
+	background-size: cover;
+	background-image: url($url);
+}

@@ -4,26 +4,19 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Petunia</title>
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Pattaya&family=Puritan&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 
-	<body>
-		<header class="hero">Petunia</header>
+	<body class="#top">
+		<header class="hero">
+			<span class="hero-header">Petunia</span>
+		</header>
 		<nav class="navbar">
-			<ul class="nav-list">
-				<li class="nav-item">Kwiaty</li>
-				<li class="nav-item">Warzywa</li>
-				<li class="nav-item">Zioła</li>
-				<li class="nav-item">Sklep online</li>
-				<li class="nav-item">Sklepy stacjonarne</li>
-				<li class="nav-item">Porady</li>
-				<li class="nav-item">Aranzacje</li>
-				<li class="nav-item">Kontakt</li>
-			</ul>
+			<ul class="nav-list"></ul>
 		</nav>
 
 		<section class="main-article">
@@ -43,90 +36,19 @@
 			<button class="secondary-button">Czytaj więcej ></button>
 		</section>
 
-		<section class="categories">
-			<div class="category">
-				<div class="round-pic pic-1"></div>
-				<button class="primary-button">Kwiaty</button>
-			</div>
-			<div class="category">
-				<div class="round-pic pic-2"></div>
-				<button class="primary-button">Warzywa</button>
-			</div>
-			<div class="category">
-				<div class="round-pic pic-3"></div>
-				<button class="primary-button">Zioła</button>
-			</div>
+		<section class="categories-wrapper">
+			<div class="categories"></div>
 		</section>
 
 		<section class="article-section">
 			<h2 class="secondary-header">
 				Artykuły, które mogą Cię zainteresować...
 			</h2>
-			<article class="article">
-				<div class="article-wrapper">
-					<h3 class="article-header">Kwiaty na zacieniony balkon</h3>
-					<p class="article-text">
-						Proin lacinia condimentum ipsum, iaculis viverra metus
-						rhoncus eu. Etiam vitae sodales urna. Nulla consequat
-						nulla sed nisl congue, vel suscipit mauris pharetra.
-						Curabitur elit dolor, vehicula quis ligula in, porta
-						feugiat lectus. In eget mi maximus, fermentum lorem
-						eget, scelerisque ex. Sed viverra quam in libero congue
-						fermentum...
-					</p>
-					<a href="#">Czytaj dalej ></a>
-				</div>
-				<div class="article-image img-1"></div>
-			</article>
-			<article class="article">
-				<div class="article-wrapper">
-					<h3 class="article-header">Kwiaty na zacieniony balkon</h3>
-					<p class="article-text">
-						Proin lacinia condimentum ipsum, iaculis viverra metus
-						rhoncus eu. Etiam vitae sodales urna. Nulla consequat
-						nulla sed nisl congue, vel suscipit mauris pharetra.
-						Curabitur elit dolor, vehicula quis ligula in, porta
-						feugiat lectus. In eget mi maximus, fermentum lorem
-						eget, scelerisque ex. Sed viverra quam in libero congue
-						fermentum...
-					</p>
-					<a href="#">Czytaj dalej ></a>
-				</div>
-				<div class="article-image img-2"></div>
-			</article>
-			<article class="article">
-				<div class="article-wrapper">
-					<h3 class="article-header">Kwiaty na zacieniony balkon</h3>
-					<p class="article-text">
-						Proin lacinia condimentum ipsum, iaculis viverra metus
-						rhoncus eu. Etiam vitae sodales urna. Nulla consequat
-						nulla sed nisl congue, vel suscipit mauris pharetra.
-						Curabitur elit dolor, vehicula quis ligula in, porta
-						feugiat lectus. In eget mi maximus, fermentum lorem
-						eget, scelerisque ex. Sed viverra quam in libero congue
-						fermentum...
-					</p>
-					<a href="#">Czytaj dalej ></a>
-				</div>
-
-				<div class="article-image img-3"></div>
-			</article>
 		</section>
 
 		<section class="photo-gallery">
 			<h2 class="secondary-header">Zainspiruj się!</h2>
-			<div class="grid-gallery">
-				<div class="photo photo-1"></div>
-				<div class="photo photo-2"></div>
-				<div class="photo photo-3"></div>
-				<div class="photo photo-4"></div>
-				<div class="photo photo-5"></div>
-				<div class="photo photo-6"></div>
-				<div class="photo photo-7"></div>
-				<div class="photo photo-8"></div>
-				<div class="photo photo-9"></div>
-				<div class="photo photo-10"></div>
-			</div>
+			<div class="grid-gallery"></div>
 		</section>
 
 		<section class="contact-wrapper">
@@ -167,24 +89,28 @@
 			Copyright, All rights reserved
 		</footer>
 
-		<div class="up-button">
-			<svg
-				width="27"
-				height="29"
-				viewBox="0 0 27 29"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path d="M16.3262 8H10.2039V29H16.3262V8Z" fill="#27742F" />
-				<path
-					d="M13.5126 9.73475e-06L9.18349 4.24265L22.1709 16.9706L26.5 12.7279L13.5126 9.73475e-06Z"
-					fill="#27742F"
-				/>
-				<path
-					d="M17.3165 4.24264L12.9874 0L0 12.7279L4.32913 16.9706L17.3165 4.24264Z"
-					fill="#27742F"
-				/>
-			</svg>
+		<div class="up-button hidden">
+			<a href="#top">
+				<svg
+					width="27"
+					height="29"
+					viewBox="0 0 27 29"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path d="M16.3262 8H10.2039V29H16.3262V8Z" fill="#27742F" />
+					<path
+						d="M13.5126 9.73475e-06L9.18349 4.24265L22.1709 16.9706L26.5 12.7279L13.5126 9.73475e-06Z"
+						fill="#27742F"
+					/>
+					<path
+						d="M17.3165 4.24264L12.9874 0L0 12.7279L4.32913 16.9706L17.3165 4.24264Z"
+						fill="#27742F"
+					/>
+				</svg>
+			</a>
 		</div>
+
+		<script type="text/javascript" src="./index.js"></script>
 	</body>
 </html>

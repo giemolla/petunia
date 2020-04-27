@@ -1,0 +1,261 @@
+@import "./variables";
+@import "./typography";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.hero {
+	@extend %flex;
+	width: 100%;
+	height: 300px;
+	background-image: url("../images/kwiaty.jpg");
+}
+
+.navbar {
+	background-color: $grey;
+	height: 50px;
+}
+
+.nav-list {
+	@extend %flex;
+	font-size: $greater-font-size;
+	font-family: $simple-font;
+}
+
+.nav-item {
+	margin: 0 15px;
+	line-height: 50px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.main-article {
+	@extend %flex;
+	@include horizontal-center;
+	width: $with-margins;
+	flex-direction: column;
+	margin-top: 40px;
+}
+
+.main-article > .text {
+	text-align: center;
+	line-height: 25px;
+	font-size: $greater-font-size;
+}
+
+.secondary-button {
+	@extend %button;
+	background-color: $secondary-color;
+}
+
+.categories-wrapper {
+	width: $full-width;
+	background-color: $secondary-color;
+	margin-top: 40px;
+	padding: 30px 0;
+}
+
+.categories {
+	@extend %flex;
+	@include horizontal-center;
+	width: $with-margins;
+}
+
+.category {
+	@extend %flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.category-pic.pic-1 {
+	@include round-picture("../images/petunia.jpeg", 150px);
+}
+
+.category-pic.pic-2 {
+	@include round-picture("../images/pomidor.jpg", 150px);
+}
+
+.category-pic.pic-3 {
+	@include round-picture("../images/bazylia.jpg", 150px);
+}
+
+.primary-button {
+	@extend %button;
+	background-color: $main-color;
+	color: $white;
+	margin-top: 20px;
+}
+
+.categories .primary-button {
+	width: 150px;
+}
+
+.article-section {
+	@include horizontal-center;
+	width: $with-margins;
+	margin-top: 80px;
+}
+
+.article-wrapper {
+	@extend %flex;
+	margin-bottom: 30px;
+}
+
+.article {
+	flex: 1;
+}
+
+.article-image-wrapper {
+	@extend %flex;
+	justify-content: flex-end;
+	flex: 1;
+}
+
+.article-image.img-1 {
+	@extend %article-image;
+	background-image: url("../images/cienie.jpg");
+}
+
+.article-image.img-2 {
+	@extend %article-image;
+	background-image: url("../images/img_0008.jpg");
+	background-position-y: 60%;
+}
+
+.article-image.img-3 {
+	@extend %article-image;
+	background-image: url("../images/ziola-na-balkonie.jpg");
+}
+
+.photo-gallery > .secondary-header {
+	margin-top: 80px;
+	padding: 20px 0;
+	width: 100%;
+	background-color: $main-color;
+	color: $white;
+	text-align: center;
+}
+
+.grid-gallery {
+	@include horizontal-center;
+	width: $with-margins;
+	height: 500px;
+	margin-top: 80px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	column-gap: 20px;
+	row-gap: 20px;
+}
+
+.photo {
+	background-size: cover;
+	background-position: center;
+	transition: transform 0.3s ease-in;
+}
+
+.photo:hover {
+	transform: scale(1.2);
+}
+
+.photo-1 {
+	@include photo(1, "jpg", 1, 3, 1, 2);
+}
+
+.photo-2 {
+	@include photo(2, "jpg", 3, 4, 1, 2);
+}
+
+.photo-3 {
+	@include photo(3, "jpg", 4, 5, 1, 3);
+}
+
+.photo-4 {
+	@include photo(4, "jpg", 5, 7, 1, 2);
+}
+
+.photo-5 {
+	@include photo(5, "jpg", 1, 3, 1, 1);
+}
+
+.photo-6 {
+	@include photo(6, "jpeg", 1, 2, 2, 4);
+}
+
+.photo-7 {
+	@include photo(7, "jpg", 2, 4, 2, 3);
+}
+
+.photo-8 {
+	@include photo(8, "jpg", 2, 4, 3, 4);
+}
+
+.photo-9 {
+	@include photo(9, "jpg", 5, 7, 2, 3);
+}
+
+.photo-10 {
+	@include photo(10, "jpeg", 4, 7, 3, 4);
+}
+
+.contact-wrapper {
+	width: $full-width;
+	padding: 30px 0;
+	margin-top: 80px;
+	background-color: $secondary-color;
+}
+
+.contact {
+	@include horizontal-center;
+	width: $with-margins;
+}
+
+.contact-header {
+	text-align: center;
+}
+
+.contact-info {
+	@extend %flex;
+	width: $full-width;
+	flex-wrap: wrap;
+}
+
+.contact-info-part {
+	text-align: center;
+	margin: 20px 40px;
+	flex-basis: 25%;
+}
+
+.footer {
+	background-color: $main-color;
+	padding: 60px 0;
+	margin-top: 30px;
+	color: $white;
+	text-align: center;
+}
+
+.up-button {
+	display: block;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 27px;
+	height: 29px;
+	padding: 10px;
+	background-color: $white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+}
+
+.up-button:hover {
+	transform: translateY(-5px);
+}
+
+.hidden {
+	display: none;
+}

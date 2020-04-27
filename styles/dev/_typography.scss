@@ -1,0 +1,36 @@
+body {
+	font-family: $simple-font;
+	font-size: $normal-font-size;
+}
+
+.hero-header {
+	@include font($fancy-font, $white, 72px);
+}
+
+h1 {
+	@include font($fancy-font, $main-color, 36px);
+}
+
+h2 {
+	@include font($fancy-font, $main-color, 28px);
+}
+
+h3 {
+	@include font($fancy-font, $main-color, 24px);
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: $main-color;
+
+	text-decoration: none;
+}
+
+a:hover {
+	color: $secondary-color;
+}

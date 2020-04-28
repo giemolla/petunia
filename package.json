@@ -16,12 +16,5 @@
     "url": "https://github.com/giemolla/petunia/issues"
   },
   "homepage": "https://github.com/giemolla/petunia#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.0"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.7"
-  }
+  "devDependencies": {}
 }

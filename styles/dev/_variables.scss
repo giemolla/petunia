@@ -35,6 +35,11 @@ $with-margins: 60%;
 	background-size: cover;
 }
 
+%frosted {
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(5px);
+}
+
 @mixin horizontal-center {
 	margin: {
 		left: auto;
@@ -43,7 +48,7 @@ $with-margins: 60%;
 }
 
 @mixin photo($photo, $ext, $cs, $ce, $rs, $re) {
-	background-image: url("../images/balkon-"+$photo+"."+$ext);
+	background-image: url("../../images/balkon-"+$photo+"."+$ext);
 	grid-column-start: $cs;
 	grid-column-end: $ce;
 	grid-row-start: $rs;

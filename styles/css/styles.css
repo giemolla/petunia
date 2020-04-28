@@ -1,0 +1,392 @@
+.hero, .hamburger-wrapper, .nav-list, .main-article, .categories, .category, .article-wrapper, .article-image-wrapper, .contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.secondary-button, .primary-button {
+  font-family: "Puritan", sans-serif;
+  font-size: inherit;
+  border-radius: 15px;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-out; }
+  .secondary-button:hover, .primary-button:hover {
+    transform: scale(1.1); }
+
+.article-image.img-1, .article-image.img-2, .article-image.img-3 {
+  width: 90%;
+  height: 200px;
+  background-size: cover; }
+
+.hamburger-wrapper, .nav-list-mobile-wrapper {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px); }
+
+body {
+  font-family: "Puritan", sans-serif;
+  font-size: 18px; }
+
+.hero-header {
+  font-family: "Pattaya", sans-serif;
+  font-size: 72px;
+  color: white; }
+
+h1 {
+  font-family: "Pattaya", sans-serif;
+  font-size: 36px;
+  color: #27742f; }
+
+h2 {
+  font-family: "Pattaya", sans-serif;
+  font-size: 28px;
+  color: #27742f; }
+
+h3 {
+  font-family: "Pattaya", sans-serif;
+  font-size: 24px;
+  color: #27742f; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: #27742f;
+  text-decoration: none; }
+
+a:hover {
+  color: rgba(39, 116, 47, 0.23); }
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../images/kwiaty.jpeg");
+  background-size: cover;
+  background-position: center; }
+
+@media only screen and (min-width: 376px) {
+  .hero {
+    height: 300px; } }
+
+.hamburger-wrapper {
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 2; }
+
+.menu-open {
+  background-color: initial; }
+
+.hamburger-strip {
+  width: 35px;
+  height: 5px;
+  background-color: #27742f;
+  margin-top: 5px;
+  z-index: 3;
+  transition: transform 0.2s; }
+  .hamburger-strip:first-of-type {
+    margin-top: 0; }
+
+.hamburger-strip.open:first-of-type {
+  width: 20px;
+  transform: rotate(-45deg) translate(-3px, 3px); }
+
+.hamburger-strip.open:nth-of-type(2) {
+  opacity: 0; }
+
+.hamburger-strip.open:last-of-type {
+  width: 20px;
+  transform: rotate(45deg) translate(-3px, -3px); }
+
+.navbar {
+  display: none;
+  background-color: #f3f3f3;
+  height: 50px;
+  position: absolute;
+  top: 250px;
+  width: 100%; }
+
+.nav-list {
+  font-size: 20px;
+  font-family: "Puritan", sans-serif; }
+
+.nav-list-mobile-wrapper {
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 1;
+  transition: left 0.2s ease-in; }
+
+.show-menu {
+  left: 0; }
+
+.nav-list-mobile {
+  display: block; }
+  .nav-list-mobile:first-child {
+    margin-top: 50px; }
+
+.nav-item {
+  margin: 0 15px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 376px) {
+  .navbar {
+    display: block; }
+  .nav-list-mobile-wrapper {
+    display: none; }
+  .hamburger-wrapper {
+    display: none; } }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+.main-article {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  flex-direction: column;
+  margin-top: 300px; }
+
+.main-article > .text {
+  text-align: center;
+  line-height: 25px;
+  font-size: 20px; }
+
+.secondary-button {
+  background-color: rgba(39, 116, 47, 0.23); }
+
+.categories-wrapper {
+  width: 100%;
+  background-color: rgba(39, 116, 47, 0.23);
+  margin-top: 40px;
+  padding: 30px 0; }
+
+.categories {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%; }
+
+.category {
+  flex-direction: column;
+  flex: 1; }
+
+.category-pic.pic-1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-size: cover;
+  background-image: url("../../images/petunia.jpeg"); }
+
+.category-pic.pic-2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-size: cover;
+  background-image: url("../../images/pomidor.jpg"); }
+
+.category-pic.pic-3 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-size: cover;
+  background-image: url("../../images/bazylia.jpg"); }
+
+.primary-button {
+  background-color: #27742f;
+  color: white;
+  margin-top: 20px; }
+
+.categories .primary-button {
+  width: 150px; }
+
+.article-section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: 80px; }
+
+.article-wrapper {
+  margin-bottom: 30px; }
+
+.article {
+  flex: 1; }
+
+.article-image-wrapper {
+  justify-content: flex-end;
+  flex: 1; }
+
+.article-image.img-1 {
+  background-image: url("../../images/cienie.jpg"); }
+
+.article-image.img-2 {
+  background-image: url("../../images/img_0008.jpg");
+  background-position-y: 60%; }
+
+.article-image.img-3 {
+  background-image: url("../../images/ziola-na-balkonie.jpg"); }
+
+.photo-gallery > .secondary-header {
+  margin-top: 80px;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #27742f;
+  color: white;
+  text-align: center; }
+
+.grid-gallery {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 500px;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px; }
+
+.photo {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in; }
+
+.photo:hover {
+  transform: scale(1.2); }
+
+.photo-1 {
+  background-image: url("../../images/balkon-1.jpg");
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+
+.photo-2 {
+  background-image: url("../../images/balkon-2.jpg");
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+
+.photo-3 {
+  background-image: url("../../images/balkon-3.jpg");
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+
+.photo-4 {
+  background-image: url("../../images/balkon-4.jpg");
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+
+.photo-5 {
+  background-image: url("../../images/balkon-5.jpg");
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1; }
+
+.photo-6 {
+  background-image: url("../../images/balkon-6.jpeg");
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4; }
+
+.photo-7 {
+  background-image: url("../../images/balkon-7.jpg");
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3; }
+
+.photo-8 {
+  background-image: url("../../images/balkon-8.jpg");
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4; }
+
+.photo-9 {
+  background-image: url("../../images/balkon-9.jpg");
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3; }
+
+.photo-10 {
+  background-image: url("../../images/balkon-10.jpeg");
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 4; }
+
+.contact-wrapper {
+  width: 100%;
+  padding: 30px 0;
+  margin-top: 80px;
+  background-color: rgba(39, 116, 47, 0.23); }
+
+.contact {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%; }
+
+.contact-header {
+  text-align: center; }
+
+.contact-info {
+  width: 100%;
+  flex-wrap: wrap; }
+
+.contact-info-part {
+  text-align: center;
+  margin: 20px 40px;
+  flex-basis: 25%; }
+
+.footer {
+  background-color: #27742f;
+  padding: 60px 0;
+  margin-top: 30px;
+  color: white;
+  text-align: center; }
+
+.up-button {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 27px;
+  height: 29px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; }
+
+.up-button:hover {
+  transform: translateY(-5px); }
+
+.hidden {
+  display: none; }

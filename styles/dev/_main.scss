@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./typography";
+@import "./hero";
+@import "./nav";
 
 html,
 body {
@@ -7,37 +7,12 @@ body {
 	padding: 0;
 }
 
-.hero {
-	@extend %flex;
-	width: 100%;
-	height: 300px;
-	background-image: url("../images/kwiaty.jpg");
-}
-
-.navbar {
-	background-color: $grey;
-	height: 50px;
-}
-
-.nav-list {
-	@extend %flex;
-	font-size: $greater-font-size;
-	font-family: $simple-font;
-}
-
-.nav-item {
-	margin: 0 15px;
-	line-height: 50px;
-	text-align: center;
-	text-transform: uppercase;
-}
-
 .main-article {
 	@extend %flex;
 	@include horizontal-center;
 	width: $with-margins;
 	flex-direction: column;
-	margin-top: 40px;
+	margin-top: 300px;
 }
 
 .main-article > .text {
@@ -71,15 +46,15 @@ body {
 }
 
 .category-pic.pic-1 {
-	@include round-picture("../images/petunia.jpeg", 150px);
+	@include round-picture("../../images/petunia.jpeg", 150px);
 }
 
 .category-pic.pic-2 {
-	@include round-picture("../images/pomidor.jpg", 150px);
+	@include round-picture("../../images/pomidor.jpg", 150px);
 }
 
 .category-pic.pic-3 {
-	@include round-picture("../images/bazylia.jpg", 150px);
+	@include round-picture("../../images/bazylia.jpg", 150px);
 }
 
 .primary-button {
@@ -116,18 +91,18 @@ body {
 
 .article-image.img-1 {
 	@extend %article-image;
-	background-image: url("../images/cienie.jpg");
+	background-image: url("../../images/cienie.jpg");
 }
 
 .article-image.img-2 {
 	@extend %article-image;
-	background-image: url("../images/img_0008.jpg");
+	background-image: url("../../images/img_0008.jpg");
 	background-position-y: 60%;
 }
 
 .article-image.img-3 {
 	@extend %article-image;
-	background-image: url("../images/ziola-na-balkonie.jpg");
+	background-image: url("../../images/ziola-na-balkonie.jpg");
 }
 
 .photo-gallery > .secondary-header {

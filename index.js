@@ -1,3 +1,9 @@
+import { arrowUp } from "./scripts/up.js";
+import { mobileMenu } from "./scripts/menu.js";
+
+arrowUp();
+mobileMenu();
+
 const navItems = [
 	"kwiaty",
 	"warzywa",
@@ -39,7 +45,7 @@ const articles = [
 	}
 ];
 
-const navList = document.querySelector(".nav-list");
+const navList = document.querySelectorAll(".nav-list");
 const categoriesNode = document.querySelector(".categories");
 const articleSection = document.querySelector(".article-section");
 const gallery = document.querySelector(".grid-gallery");
@@ -92,7 +98,14 @@ const generateNav = generateRecurrentElements(
 	navItems,
 	"li",
 	"nav-item",
-	navList
+	navList[0]
+);
+
+const generateMobileNav = generateRecurrentElements(
+	navItems,
+	"li",
+	"nav-item",
+	navList[1]
 );
 
 const generateCategories = generateRecurrentElements(
@@ -115,18 +128,3 @@ const generateGallery = generateRecurrentElements(
 	"photo",
 	gallery
 );
-
-const arrowUp = document.querySelector(".up-button");
-
-arrowUp.addEventListener("click", function(e) {
-	e.preventDefault();
-	window.scroll({ top: 0, behavior: "smooth" });
-});
-
-window.addEventListener("scroll", function(e) {
-	if (window.scrollY > 0) {
-		arrowUp.classList.remove("hidden");
-	} else {
-		arrowUp.classList.add("hidden");
-	}
-});

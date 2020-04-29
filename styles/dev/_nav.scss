@@ -4,14 +4,16 @@
 	flex-direction: column;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 50px;
 	height: 50px;
-	z-index: 2;
+	z-index: 4;
 }
 
 .menu-open {
-	background-color: initial;
+	background-color: transparent;
+	backdrop-filter: none;
 }
 
 .hamburger-strip {
@@ -19,7 +21,7 @@
 	height: 5px;
 	background-color: $main-color;
 	margin-top: 5px;
-	z-index: 3;
+	z-index: 4;
 	transition: transform 0.2s;
 
 	&:first-of-type {
@@ -57,14 +59,14 @@
 }
 
 .nav-list-mobile-wrapper {
-	@extend %frosted;
 	display: block;
-	width: 50%;
+	background-color: $white;
+	width: 60%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: -100%;
-	z-index: 1;
+	z-index: 3;
 	transition: left 0.2s ease-in;
 }
 
@@ -73,7 +75,8 @@
 }
 
 .nav-list-mobile {
-	display: block;
+	flex-direction: column;
+	color: $main-color;
 
 	&:first-child {
 		margin-top: 50px;
@@ -81,10 +84,14 @@
 }
 
 .nav-item {
-	margin: 0 15px;
-	line-height: 50px;
+	margin: 15px;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.nav-list-mobile .nav-item {
+	width: 100%;
+	padding: 10px 0;
 }
 
 @media only screen and (min-width: 376px) {

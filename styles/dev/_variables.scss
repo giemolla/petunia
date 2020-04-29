@@ -1,7 +1,7 @@
 $simple-font: "Puritan", sans-serif;
 $fancy-font: "Pattaya", sans-serif;
 $main-color: rgba(39, 116, 47, 1);
-$secondary-color: rgba(39, 116, 47, 0.23);
+$secondary-color: #b3e8bc;
 $white: rgba(255, 255, 255, 1);
 $grey: #f3f3f3;
 $greater-font-size: 20px;
@@ -27,6 +27,21 @@ $with-margins: 60%;
 	&:hover {
 		transform: scale(1.1);
 	}
+
+	&.primary-button {
+		background-color: $main-color;
+		color: $white;
+		margin-top: 20px;
+	}
+
+	&.inverted-button {
+		background-color: $white;
+		color: $main-color;
+	}
+
+	&.secondary-button {
+		background-color: $secondary-color;
+	}
 }
 
 %article-image {
@@ -36,8 +51,8 @@ $with-margins: 60%;
 }
 
 %frosted {
-	background-color: rgba(255, 255, 255, 0.15);
-	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, 0.65);
+	backdrop-filter: blur(1px);
 }
 
 @mixin horizontal-center {

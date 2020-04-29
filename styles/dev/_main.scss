@@ -21,11 +21,6 @@ body {
 	font-size: $greater-font-size;
 }
 
-.secondary-button {
-	@extend %button;
-	background-color: $secondary-color;
-}
-
 .categories-wrapper {
 	width: $full-width;
 	background-color: $secondary-color;
@@ -55,13 +50,6 @@ body {
 
 .category-pic.pic-3 {
 	@include round-picture("../../images/bazylia.jpg", 150px);
-}
-
-.primary-button {
-	@extend %button;
-	background-color: $main-color;
-	color: $white;
-	margin-top: 20px;
 }
 
 .categories .primary-button {

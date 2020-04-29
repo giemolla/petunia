@@ -12,13 +12,13 @@ const navItems = [
 	"sklepy stacjonarne",
 	"porady",
 	"aranzacje",
-	"kontakt"
+	"kontakt",
 ];
 
 const categories = [
 	{ name: "kwiaty", imageUrl: "./images/petunia.jpeg" },
 	{ name: "warzywa", imageUrl: "./images/pomidor.jpg" },
-	{ name: "zioła", imageUrl: "./images/bazylia.jpg" }
+	{ name: "zioła", imageUrl: "./images/bazylia.jpg" },
 ];
 
 const articles = [
@@ -27,22 +27,22 @@ const articles = [
 		title: "Kwiaty na zacieniony balkon",
 		content:
 			"Proin lacinia condimentum ipsum, iaculis viverra metus rhoncus eu. Etiam vitae sodales urna. Nulla consequat nulla sed nisl congue, vel suscipit mauris pharetra. Curabitur elit dolor, vehicula quis ligula in, porta feugiat lectus. In eget mi maximus, fermentum lorem eget, scelerisque ex. Sed viverra quam in libero congue fermentum...",
-		imageUrl: "./images/cienie.jpg"
+		imageUrl: "./images/cienie.jpg",
 	},
 	{
 		id: 2,
 		title: "Kwiaty na zacieniony balkon",
 		content:
 			"Proin lacinia condimentum ipsum, iaculis viverra metus rhoncus eu. Etiam vitae sodales urna. Nulla consequat nulla sed nisl congue, vel suscipit mauris pharetra. Curabitur elit dolor, vehicula quis ligula in, porta feugiat lectus. In eget mi maximus, fermentum lorem eget, scelerisque ex. Sed viverra quam in libero congue fermentum...",
-		imageUrl: "./images/img_0008.jpg"
+		imageUrl: "./images/img_0008.jpg",
 	},
 	{
 		id: 3,
 		title: "Kwiaty na zacieniony balkon",
 		content:
 			"Proin lacinia condimentum ipsum, iaculis viverra metus rhoncus eu. Etiam vitae sodales urna. Nulla consequat nulla sed nisl congue, vel suscipit mauris pharetra. Curabitur elit dolor, vehicula quis ligula in, porta feugiat lectus. In eget mi maximus, fermentum lorem eget, scelerisque ex. Sed viverra quam in libero congue fermentum...",
-		imageUrl: "./images/ziola-na-balkonie.jpg"
-	}
+		imageUrl: "./images/ziola-na-balkonie.jpg",
+	},
 ];
 
 const navList = document.querySelectorAll(".nav-list");
@@ -50,7 +50,7 @@ const categoriesNode = document.querySelector(".categories");
 const articleSection = document.querySelector(".article-section");
 const gallery = document.querySelector(".grid-gallery");
 
-const categoryTemplate = function(item, i) {
+const categoryTemplate = function (item, i) {
 	const { name } = item;
 	return `
         <div class="category">
@@ -60,7 +60,7 @@ const categoryTemplate = function(item, i) {
     `;
 };
 
-const articleTemplate = function(item, i) {
+const articleTemplate = function (item, i) {
 	const { title, content } = item;
 	return `
         <div class="article">
@@ -90,6 +90,7 @@ function generateRecurrentElements(array, elementType, cssClass, parent) {
 		if (cssClass === "photo") {
 			recurrentElement.classList.add(`photo-${i + 1}`);
 		}
+		console.log(parent);
 		parent.appendChild(recurrentElement);
 	});
 }

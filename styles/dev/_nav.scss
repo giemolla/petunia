@@ -1,7 +1,27 @@
+.navbar {
+	display: none;
+	background-color: $grey;
+	height: 50px;
+	position: absolute;
+	top: 250px;
+	width: 100%;
+}
+
+.nav-list {
+	@include flex(row);
+	font-size: $greater-font-size;
+	font-family: $simple-font;
+}
+
+.nav-item {
+	margin: 15px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 .hamburger-wrapper {
 	@extend %frosted;
-	@extend %flex;
-	flex-direction: column;
+	@include flex(column);
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -43,22 +63,7 @@
 	transform: rotate(45deg) translate(-3px, -3px);
 }
 
-.navbar {
-	display: none;
-	background-color: $grey;
-	height: 50px;
-	position: absolute;
-	top: 250px;
-	width: 100%;
-}
-
-.nav-list {
-	@extend %flex;
-	font-size: $greater-font-size;
-	font-family: $simple-font;
-}
-
-.nav-list-mobile-wrapper {
+.navbar-mobile {
 	display: block;
 	background-color: $white;
 	width: 60%;
@@ -75,23 +80,19 @@
 }
 
 .nav-list-mobile {
-	flex-direction: column;
+	@include flex(column);
+	height: 95%;
 	color: $main-color;
 
 	&:first-child {
-		margin-top: 50px;
+		margin-top: 25px;
 	}
-}
 
-.nav-item {
-	margin: 15px;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.nav-list-mobile .nav-item {
-	width: 100%;
-	padding: 10px 0;
+	& > .nav-item {
+		@include flex(row);
+		flex: 1;
+		width: 100%;
+	}
 }
 
 @media only screen and (min-width: $mobile) {

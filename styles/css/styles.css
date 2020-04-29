@@ -1,4 +1,4 @@
-.hero, .hero-content, .hero-buttons, .hamburger-wrapper, .nav-list, .main-article, .categories, .category, .article-wrapper, .article-image-wrapper, .contact-info {
+.hero, .hero-content, .hero-buttons, .nav-list, .hamburger-wrapper, .nav-list-mobile, .nav-list-mobile > .nav-item, .main-article, .categories, .category, .article-wrapper, .article-image-wrapper, .contact-info {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -96,14 +96,13 @@ a:hover {
   height: 80%;
   margin-top: 25px;
   position: absolute; }
-
-.frosted-glass:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0; }
+  .frosted-glass:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
 
 .hero-header {
   display: none; }
@@ -136,6 +135,24 @@ a:hover {
     display: block; }
   .hero-content {
     display: none; } }
+
+.navbar {
+  display: none;
+  background-color: #f3f3f3;
+  height: 50px;
+  position: absolute;
+  top: 250px;
+  width: 100%; }
+
+.nav-list {
+  flex-direction: row;
+  font-size: 20px;
+  font-family: "Puritan", sans-serif; }
+
+.nav-item {
+  margin: 15px;
+  text-align: center;
+  text-transform: uppercase; }
 
 .hamburger-wrapper {
   flex-direction: column;
@@ -172,19 +189,7 @@ a:hover {
   width: 20px;
   transform: rotate(45deg) translate(-3px, -3px); }
 
-.navbar {
-  display: none;
-  background-color: #f3f3f3;
-  height: 50px;
-  position: absolute;
-  top: 250px;
-  width: 100%; }
-
-.nav-list {
-  font-size: 20px;
-  font-family: "Puritan", sans-serif; }
-
-.nav-list-mobile-wrapper {
+.navbar-mobile {
   display: block;
   background-color: white;
   width: 60%;
@@ -200,18 +205,14 @@ a:hover {
 
 .nav-list-mobile {
   flex-direction: column;
+  height: 95%;
   color: #27742f; }
   .nav-list-mobile:first-child {
-    margin-top: 50px; }
-
-.nav-item {
-  margin: 15px;
-  text-align: center;
-  text-transform: uppercase; }
-
-.nav-list-mobile .nav-item {
-  width: 100%;
-  padding: 10px 0; }
+    margin-top: 25px; }
+  .nav-list-mobile > .nav-item {
+    flex-direction: row;
+    flex: 1;
+    width: 100%; }
 
 @media only screen and (min-width: 480px) {
   .navbar {

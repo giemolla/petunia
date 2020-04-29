@@ -24,22 +24,17 @@
 	height: 80%;
 	margin-top: 25px;
 	position: absolute;
-}
 
-.frosted-glass:before {
-	content: "";
-	@extend %frosted;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+	&:before {
+		content: "";
+		@extend %frosted;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
 }
-
-// %on-frost {
-// 	position: absolute;
-// 	z-index: 3;
-// }
 
 .hero-header {
 	display: none;

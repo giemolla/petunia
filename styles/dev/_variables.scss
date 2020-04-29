@@ -8,11 +8,18 @@ $greater-font-size: 20px;
 $normal-font-size: 18px;
 $full-width: 100%;
 $with-margins: 60%;
+$tablet: 768px;
+$mobile: 480px;
 
 %flex {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@mixin flex($direction) {
+	@extend %flex;
+	flex-direction: $direction;
 }
 
 %button {
@@ -63,7 +70,7 @@ $with-margins: 60%;
 }
 
 @mixin photo($photo, $ext, $cs, $ce, $rs, $re) {
-	background-image: url("../../images/balkon-"+$photo+"."+$ext);
+	background-image: url("../../images/balkon-" + $photo + "." + $ext);
 	grid-column-start: $cs;
 	grid-column-end: $ce;
 	grid-row-start: $rs;
@@ -74,6 +81,9 @@ $with-margins: 60%;
 	font-family: $family;
 	font-size: $size;
 	color: $color;
+	@if ($mobile) {
+		font-size: 0.8 * ($size);
+	}
 }
 
 @mixin round-picture($url, $size, $border: 5px solid $white) {

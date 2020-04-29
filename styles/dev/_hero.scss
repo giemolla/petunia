@@ -1,0 +1,75 @@
+.hero {
+	@extend %flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("../../images/kwiaty.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+
+.frosted-glass {
+	@extend %frosted;
+	width: 90%;
+	height: 80%;
+	position: absolute;
+	z-index: 2;
+	display: block;
+	top: 12%;
+}
+
+%on-frost {
+	position: absolute;
+	z-index: 3;
+}
+
+.hero-header {
+	@extend %on-frost;
+	color: $main-color;
+	top: 15%;
+}
+
+.hero .main-header {
+	@extend %on-frost;
+	display: block;
+	text-align: center;
+	top: 30%;
+	width: 60%;
+	font-size: 26px;
+}
+
+.hero-buttons {
+	@extend %flex;
+	flex-direction: column;
+	@extend %on-frost;
+	top: 50%;
+}
+
+.hero-button {
+	@extend %button;
+	flex: 1;
+	margin: 20px auto;
+	border-radius: 0;
+	padding: 15px 20px;
+}
+
+@media only screen and (min-width: 376px) {
+	.hero {
+		height: 300px;
+	}
+	.frosted-glass {
+		display: none;
+	}
+	.hero-header {
+		color: $white;
+	}
+	.hero .main-header {
+		display: none;
+	}
+	.hero-buttons {
+		display: none;
+	}
+}

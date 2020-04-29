@@ -3,8 +3,9 @@
 <html lang="pl">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Petunia</title>
-		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="stylesheet" href="styles/css/styles.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Pattaya&family=Puritan&display=swap"
 			rel="stylesheet"
@@ -13,10 +14,32 @@
 
 	<body class="#top">
 		<header class="hero">
+			<div class="frosted-glass"></div>
 			<span class="hero-header">Petunia</span>
+			<h1 class="main-header">Stwórz swój własny zielony balkon!</h1>
+			<div class="hero-buttons">
+				<button class="primary-button hero-button">
+					Dowiedz się więcej >
+				</button>
+				<button class="inverted-button hero-button">
+					Przejdź do sklepu
+				</button>
+			</div>
 		</header>
 		<nav class="navbar">
 			<ul class="nav-list"></ul>
+		</nav>
+
+		<nav class="mobile-nav-wrapper">
+			<div class="hamburger-wrapper">
+				<div class="hamburger-strip"></div>
+				<div class="hamburger-strip"></div>
+				<div class="hamburger-strip"></div>
+			</div>
+
+			<div class="nav-list-mobile-wrapper">
+				<ul class="nav-list nav-list-mobile"></ul>
+			</div>
 		</nav>
 
 		<section class="main-article">
@@ -111,6 +134,6 @@
 			</a>
 		</div>
 
-		<script type="text/javascript" src="./index.js"></script>
+		<script type="module" src="./index.js"></script>
 	</body>
 </html>

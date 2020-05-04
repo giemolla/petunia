@@ -55,7 +55,7 @@ const categoryTemplate = function (item, i) {
 	return `
         <div class="category">
             <div class="category-pic pic-${i + 1}"></div>
-            <button class="primary-button">${name.toUpperCase()}</button>
+            <button class="button primary-button">${name.toUpperCase()}</button>
         </div>
     `;
 };

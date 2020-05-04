@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center; }
 
-.hero-button {
+.hero-button, .main-article .button, .categories .button {
   font-family: "Puritan", sans-serif;
   font-size: inherit;
   border-radius: 15px;
@@ -11,21 +11,22 @@
   padding: 10px 30px;
   cursor: pointer;
   transition: transform 0.2s ease-out; }
-  .hero-button:hover {
+  .hero-button:hover, .main-article .button:hover, .categories .button:hover {
     transform: scale(1.1); }
-  .primary-button.hero-button {
+  .primary-button.hero-button, .main-article .primary-button.button, .categories .primary-button.button {
     background-color: #27742f;
     color: white;
     margin-top: 20px; }
-  .inverted-button.hero-button {
+  .inverted-button.hero-button, .main-article .inverted-button.button, .categories .inverted-button.button {
     background-color: white;
     color: #27742f; }
-  .secondary-button.hero-button {
+  .secondary-button.hero-button, .main-article .secondary-button.button, .categories .secondary-button.button {
     background-color: #b3e8bc; }
 
-.article-image.img-1, .article-image.img-2, .article-image.img-3 {
+.article-image {
   width: 90%;
   height: 200px;
+  min-width: 200px;
   background-size: cover; }
 
 .frosted-glass:before, .hamburger-wrapper {
@@ -127,7 +128,7 @@ a:hover {
 
 @media only screen and (min-width: 480px) {
   .hero {
-    height: 300px; }
+    height: 400px; }
   .frosted-glass {
     display: none; }
   .hero-header {
@@ -141,7 +142,7 @@ a:hover {
   background-color: #f3f3f3;
   height: 50px;
   position: absolute;
-  top: 250px;
+  top: 350px;
   width: 100%; }
 
 .nav-list {
@@ -217,27 +218,36 @@ a:hover {
 @media only screen and (min-width: 480px) {
   .navbar {
     display: block; }
-  .nav-list-mobile-wrapper {
+  .navbar-mobile {
     display: none; }
   .hamburger-wrapper {
     display: none; } }
 
-html,
-body {
-  margin: 0;
-  padding: 0; }
+@media only screen and (max-width: 768px) {
+  .nav-list {
+    font-size: 14px; } }
 
 .main-article {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
   flex-direction: column;
-  margin-top: 300px; }
+  margin-top: 440px;
+  margin-bottom: 80px;
+  text-align: center; }
 
 .main-article > .text {
-  text-align: center;
   line-height: 25px;
   font-size: 20px; }
+
+@media only screen and (max-width: 768px) {
+  .main-article > .text {
+    font-size: 18px; } }
+
+@media only screen and (max-width: 480px) {
+  .main-article {
+    margin-top: 100vh;
+    width: 80%; } }
 
 .categories-wrapper {
   width: 100%;
@@ -248,11 +258,13 @@ body {
 .categories {
   margin-left: auto;
   margin-right: auto;
-  width: 60%; }
+  width: 60%;
+  flex-wrap: wrap; }
 
 .category {
   flex-direction: column;
-  flex: 1; }
+  flex: 1;
+  flex-basis: 150px; }
 
 .category-pic.pic-1 {
   width: 150px;
@@ -278,8 +290,39 @@ body {
   background-size: cover;
   background-image: url("../../images/bazylia.jpg"); }
 
-.categories .primary-button {
+.categories .button {
   width: 150px; }
+
+@media only screen and (max-width: 768px) {
+  .category-pic.pic-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-size: cover;
+    background-image: url("../../images/petunia.jpeg"); }
+  .category-pic.pic-2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-size: cover;
+    background-image: url("../../images/pomidor.jpg"); }
+  .category-pic.pic-3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-size: cover;
+    background-image: url("../../images/bazylia.jpg"); }
+  .categories .button {
+    width: 100px;
+    font-size: 14.4px;
+    padding: 10px 15px; } }
+
+@media only screen and (max-width: 480px) {
+  .category {
+    margin-bottom: 20px; } }
 
 .article-section {
   margin-left: auto;
@@ -306,6 +349,23 @@ body {
 
 .article-image.img-3 {
   background-image: url("../../images/ziola-na-balkonie.jpg"); }
+
+@media only screen and (max-width: 768px) {
+  .article-section {
+    width: 80%; } }
+
+@media only screen and (max-width: 480px) {
+  .article-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .article-image-wrapper {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px; }
+  .article-image {
+    width: 100%; } }
 
 .photo-gallery > .secondary-header {
   margin-top: 80px;
@@ -405,6 +465,73 @@ body {
   grid-row-start: 3;
   grid-row-end: 4; }
 
+@media only screen and (max-width: 768px) {
+  .grid-gallery {
+    width: 100%;
+    column-gap: 10px;
+    row-gap: 10px; }
+  .photo:hover {
+    transform: none; } }
+
+@media only screen and (max-width: 480px) {
+  .grid-gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+    margin-top: 40px; }
+  .photo-1 {
+    background-image: url("../../images/balkon-1.jpg");
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; }
+  .photo-2 {
+    background-image: url("../../images/balkon-2.jpg");
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; }
+  .photo-3 {
+    background-image: url("../../images/balkon-3.jpg");
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3; }
+  .photo-4 {
+    background-image: url("../../images/balkon-4.jpg");
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3; }
+  .photo-5 {
+    background-image: url("../../images/balkon-5.jpg");
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4; }
+  .photo-6 {
+    background-image: url("../../images/balkon-6.jpeg");
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4; }
+  .photo-7 {
+    background-image: url("../../images/balkon-6.jpeg");
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5; }
+  .photo-8 {
+    background-image: url("../../images/balkon-6.jpeg");
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5; }
+  .photo-9,
+  .photo-10 {
+    display: none; } }
+
 .contact-wrapper {
   width: 100%;
   padding: 30px 0;
@@ -427,6 +554,25 @@ body {
   text-align: center;
   margin: 20px 40px;
   flex-basis: 25%; }
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    width: 100%; } }
+
+@media only screen and (max-width: 480px) {
+  .contact-wrapper {
+    margin-top: 40px; }
+  .contact-info {
+    display: block; }
+  .contact-info-part {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 40px 10px; } }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
 
 .footer {
   background-color: #27742f;

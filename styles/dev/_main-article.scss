@@ -1,0 +1,31 @@
+.main-article {
+	@extend %flex;
+	@include horizontal-center;
+	width: $with-margins;
+	flex-direction: column;
+	margin-top: 440px;
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.main-article > .text {
+	line-height: 25px;
+	font-size: $greater-font-size;
+}
+
+.main-article .button {
+	@extend %button;
+}
+
+@media only screen and (max-width: $tablet) {
+	.main-article > .text {
+		font-size: $normal-font-size;
+	}
+}
+
+@media only screen and (max-width: $mobile) {
+	.main-article {
+		margin-top: 100vh;
+		width: $mobile-width;
+	}
+}

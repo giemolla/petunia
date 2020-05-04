@@ -1,0 +1,58 @@
+.article-section {
+	@include horizontal-center;
+	width: $with-margins;
+	margin-top: 80px;
+}
+
+.article-wrapper {
+	@extend %flex;
+	margin-bottom: 30px;
+}
+
+.article {
+	flex: 1;
+}
+
+.article-image-wrapper {
+	@extend %flex;
+	justify-content: flex-end;
+	flex: 1;
+}
+
+.article-image {
+	@extend %article-image;
+
+	&.img-1 {
+		background-image: url("../../images/cienie.jpg");
+	}
+	&.img-2 {
+		background-image: url("../../images/img_0008.jpg");
+		background-position-y: 60%;
+	}
+	&.img-3 {
+		background-image: url("../../images/ziola-na-balkonie.jpg");
+	}
+}
+
+@media only screen and (max-width: $tablet) {
+	.article-section {
+		width: $mobile-width;
+	}
+}
+
+@media only screen and (max-width: $mobile) {
+	.article-wrapper {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.article-image-wrapper {
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-top: 10px;
+	}
+	.article-image {
+		width: 100%;
+	}
+}

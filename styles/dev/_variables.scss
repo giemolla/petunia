@@ -8,6 +8,7 @@ $greater-font-size: 20px;
 $normal-font-size: 18px;
 $full-width: 100%;
 $with-margins: 60%;
+$mobile-width: 80%;
 $tablet: 768px;
 $mobile: 480px;
 
@@ -54,6 +55,7 @@ $mobile: 480px;
 %article-image {
 	width: 90%;
 	height: 200px;
+	min-width: 200px;
 	background-size: cover;
 }
 
@@ -81,7 +83,7 @@ $mobile: 480px;
 	font-family: $family;
 	font-size: $size;
 	color: $color;
-	@if ($mobile) {
+	@if ($tablet or $mobile) {
 		font-size: 0.8 * ($size);
 	}
 }

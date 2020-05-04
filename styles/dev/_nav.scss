@@ -3,7 +3,7 @@
 	background-color: $grey;
 	height: 50px;
 	position: absolute;
-	top: 250px;
+	top: 350px;
 	width: 100%;
 }
 
@@ -99,10 +99,16 @@
 	.navbar {
 		display: block;
 	}
-	.nav-list-mobile-wrapper {
+	.navbar-mobile {
 		display: none;
 	}
 	.hamburger-wrapper {
 		display: none;
+	}
+}
+
+@media only screen and (max-width: $tablet) {
+	.nav-list {
+		font-size: 14px;
 	}
 }

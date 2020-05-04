@@ -3,110 +3,13 @@
 @import "./main-article";
 @import "./categories";
 @import "./articles";
+@import "./photo-gallery";
+@import "./contact";
 
 html,
 body {
 	margin: 0;
 	padding: 0;
-}
-
-.photo-gallery > .secondary-header {
-	margin-top: 80px;
-	padding: 20px 0;
-	width: 100%;
-	background-color: $main-color;
-	color: $white;
-	text-align: center;
-}
-
-.grid-gallery {
-	@include horizontal-center;
-	width: $with-margins;
-	height: 500px;
-	margin-top: 80px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	column-gap: 20px;
-	row-gap: 20px;
-}
-
-.photo {
-	background-size: cover;
-	background-position: center;
-	transition: transform 0.3s ease-in;
-}
-
-.photo:hover {
-	transform: scale(1.2);
-}
-
-.photo-1 {
-	@include photo(1, "jpg", 1, 3, 1, 2);
-}
-
-.photo-2 {
-	@include photo(2, "jpg", 3, 4, 1, 2);
-}
-
-.photo-3 {
-	@include photo(3, "jpg", 4, 5, 1, 3);
-}
-
-.photo-4 {
-	@include photo(4, "jpg", 5, 7, 1, 2);
-}
-
-.photo-5 {
-	@include photo(5, "jpg", 1, 3, 1, 1);
-}
-
-.photo-6 {
-	@include photo(6, "jpeg", 1, 2, 2, 4);
-}
-
-.photo-7 {
-	@include photo(7, "jpg", 2, 4, 2, 3);
-}
-
-.photo-8 {
-	@include photo(8, "jpg", 2, 4, 3, 4);
-}
-
-.photo-9 {
-	@include photo(9, "jpg", 5, 7, 2, 3);
-}
-
-.photo-10 {
-	@include photo(10, "jpeg", 4, 7, 3, 4);
-}
-
-.contact-wrapper {
-	width: $full-width;
-	padding: 30px 0;
-	margin-top: 80px;
-	background-color: $secondary-color;
-}
-
-.contact {
-	@include horizontal-center;
-	width: $with-margins;
-}
-
-.contact-header {
-	text-align: center;
-}
-
-.contact-info {
-	@extend %flex;
-	width: $full-width;
-	flex-wrap: wrap;
-}
-
-.contact-info-part {
-	text-align: center;
-	margin: 20px 40px;
-	flex-basis: 25%;
 }
 
 .footer {

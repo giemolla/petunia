@@ -1,0 +1,47 @@
+.contact-wrapper {
+	width: $full-width;
+	padding: 30px 0;
+	margin-top: 80px;
+	background-color: $secondary-color;
+}
+
+.contact {
+	@include horizontal-center;
+	width: $with-margins;
+}
+
+.contact-header {
+	text-align: center;
+}
+
+.contact-info {
+	@extend %flex;
+	width: $full-width;
+	flex-wrap: wrap;
+}
+
+.contact-info-part {
+	text-align: center;
+	margin: 20px 40px;
+	flex-basis: 25%;
+}
+
+@media only screen and (max-width: $tablet) {
+	.contact {
+		width: $full-width;
+	}
+}
+
+@media only screen and (max-width: $mobile) {
+	.contact-wrapper {
+		margin-top: 40px;
+	}
+	.contact-info {
+		display: block;
+	}
+	.contact-info-part {
+		font-size: 16px;
+		line-height: 16px;
+		margin: 40px 10px;
+	}
+}

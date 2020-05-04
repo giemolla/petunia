@@ -19,20 +19,19 @@
 	flex: 1;
 }
 
-.article-image.img-1 {
+.article-image {
 	@extend %article-image;
-	background-image: url("../../images/cienie.jpg");
-}
 
-.article-image.img-2 {
-	@extend %article-image;
-	background-image: url("../../images/img_0008.jpg");
-	background-position-y: 60%;
-}
-
-.article-image.img-3 {
-	@extend %article-image;
-	background-image: url("../../images/ziola-na-balkonie.jpg");
+	&.img-1 {
+		background-image: url("../../images/cienie.jpg");
+	}
+	&.img-2 {
+		background-image: url("../../images/img_0008.jpg");
+		background-position-y: 60%;
+	}
+	&.img-3 {
+		background-image: url("../../images/ziola-na-balkonie.jpg");
+	}
 }
 
 @media only screen and (max-width: $tablet) {
@@ -52,5 +51,8 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		margin-top: 10px;
+	}
+	.article-image {
+		width: 100%;
 	}
 }

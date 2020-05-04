@@ -1,0 +1,69 @@
+$pic-size-big: 150px;
+$pic-size-small: 100px;
+
+.categories-wrapper {
+	width: $full-width;
+	background-color: $secondary-color;
+	margin-top: 40px;
+	padding: 30px 0;
+}
+
+.categories {
+	@extend %flex;
+	@include horizontal-center;
+	width: $with-margins;
+	flex-wrap: wrap;
+}
+
+.category {
+	@extend %flex;
+	flex-direction: column;
+	flex: 1;
+	flex-basis: $pic-size-big;
+}
+
+.category-pic {
+	&.pic-1 {
+		@include round-picture("../../images/petunia.jpeg", $pic-size-big);
+	}
+	&.pic-2 {
+		@include round-picture("../../images/pomidor.jpg", $pic-size-big);
+	}
+	&.pic-3 {
+		@include round-picture("../../images/bazylia.jpg", $pic-size-big);
+	}
+}
+
+.categories .button {
+	@extend %button;
+	width: $pic-size-big;
+}
+
+@media only screen and (max-width: $tablet) {
+	.category-pic {
+		&.pic-1 {
+			@include round-picture(
+				"../../images/petunia.jpeg",
+				$pic-size-small
+			);
+		}
+		&.pic-2 {
+			@include round-picture("../../images/pomidor.jpg", $pic-size-small);
+		}
+		&.pic-3 {
+			@include round-picture("../../images/bazylia.jpg", $pic-size-small);
+		}
+	}
+
+	.categories .button {
+		width: $pic-size-small;
+		font-size: $normal-font-size * 0.8;
+		padding: 10px 15px;
+	}
+}
+
+@media only screen and (max-width: $mobile) {
+	.category {
+		margin-bottom: 20px;
+	}
+}

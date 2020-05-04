@@ -1,59 +1,12 @@
 @import "./hero";
 @import "./nav";
+@import "./main-article";
+@import "./categories";
 
 html,
 body {
 	margin: 0;
 	padding: 0;
-}
-
-.main-article {
-	@extend %flex;
-	@include horizontal-center;
-	width: $with-margins;
-	flex-direction: column;
-	margin-top: 300px;
-}
-
-.main-article > .text {
-	text-align: center;
-	line-height: 25px;
-	font-size: $greater-font-size;
-}
-
-.categories-wrapper {
-	width: $full-width;
-	background-color: $secondary-color;
-	margin-top: 40px;
-	padding: 30px 0;
-}
-
-.categories {
-	@extend %flex;
-	@include horizontal-center;
-	width: $with-margins;
-}
-
-.category {
-	@extend %flex;
-	flex-direction: column;
-	flex: 1;
-}
-
-.category-pic.pic-1 {
-	@include round-picture("../../images/petunia.jpeg", 150px);
-}
-
-.category-pic.pic-2 {
-	@include round-picture("../../images/pomidor.jpg", 150px);
-}
-
-.category-pic.pic-3 {
-	@include round-picture("../../images/bazylia.jpg", 150px);
-}
-
-.categories .primary-button {
-	width: 150px;
 }
 
 .article-section {

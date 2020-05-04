@@ -2,48 +2,12 @@
 @import "./nav";
 @import "./main-article";
 @import "./categories";
+@import "./articles";
 
 html,
 body {
 	margin: 0;
 	padding: 0;
-}
-
-.article-section {
-	@include horizontal-center;
-	width: $with-margins;
-	margin-top: 80px;
-}
-
-.article-wrapper {
-	@extend %flex;
-	margin-bottom: 30px;
-}
-
-.article {
-	flex: 1;
-}
-
-.article-image-wrapper {
-	@extend %flex;
-	justify-content: flex-end;
-	flex: 1;
-}
-
-.article-image.img-1 {
-	@extend %article-image;
-	background-image: url("../../images/cienie.jpg");
-}
-
-.article-image.img-2 {
-	@extend %article-image;
-	background-image: url("../../images/img_0008.jpg");
-	background-position-y: 60%;
-}
-
-.article-image.img-3 {
-	@extend %article-image;
-	background-image: url("../../images/ziola-na-balkonie.jpg");
 }
 
 .photo-gallery > .secondary-header {

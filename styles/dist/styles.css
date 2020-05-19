@@ -574,6 +574,10 @@ a:hover {
     line-height: 16px;
     margin: 40px 10px; } }
 
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth; }
+
 html,
 body {
   margin: 0;

@@ -90,7 +90,6 @@ function generateRecurrentElements(array, elementType, cssClass, parent) {
 		if (cssClass === "photo") {
 			recurrentElement.classList.add(`photo-${i + 1}`);
 		}
-		console.log(parent);
 		parent.appendChild(recurrentElement);
 	});
 }

@@ -31,6 +31,7 @@
 
 .frosted-glass:before, .hamburger-wrapper {
   background-color: rgba(255, 255, 255, 0.65);
+  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px); }
 
 body {
@@ -167,6 +168,7 @@ a:hover {
 
 .menu-open {
   background-color: transparent;
+  -webkit-backdrop-filter: none;
   backdrop-filter: none; }
 
 .hamburger-strip {
@@ -384,6 +386,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  -moz-column-gap: 20px;
   column-gap: 20px;
   row-gap: 20px; }
 
@@ -468,6 +471,7 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .grid-gallery {
     width: 100%;
+    -moz-column-gap: 10px;
     column-gap: 10px;
     row-gap: 10px; }
   .photo:hover {
@@ -477,6 +481,7 @@ a:hover {
   .grid-gallery {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    -moz-column-gap: 5px;
     column-gap: 5px;
     row-gap: 5px;
     margin-top: 40px; }

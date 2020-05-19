@@ -16,10 +16,8 @@ $pic-size-small: 100px;
 }
 
 .category {
-	@extend %flex;
-	flex-direction: column;
+	@include flex(column);
 	flex: 1;
-	flex-basis: $pic-size-big;
 }
 
 .category-pic {
@@ -65,5 +63,6 @@ $pic-size-small: 100px;
 @media only screen and (max-width: $mobile) {
 	.category {
 		margin-bottom: 20px;
+		flex-basis: $pic-size-big;
 	}
 }

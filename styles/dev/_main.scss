@@ -6,6 +6,11 @@
 @import "./photo-gallery";
 @import "./contact";
 
+html {
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	margin: 0;
